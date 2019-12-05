@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+      <title>確認画面</title>
+  </head>
+  <body>
+
+   	<table border="1">
+        <tr><th>ID</th><th>inputbox</th></tr>
+        <tr th:each="message, stat : ${message}" th:object="${message}">
+            <td th:text="*{text}"></td>
+            <td><input type="text" name="text" th:value="*{text}"></td>
+        </tr>
+    </table>
+  </body>
+</html>
